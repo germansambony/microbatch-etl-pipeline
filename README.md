@@ -307,13 +307,10 @@ Así validas sin contaminar el estado principal del pipeline.
 
 ## Evidencia de Ejecución
 
-Para la entrega, la evidencia visual puede mantenerse en un apartado discreto y
-sin mezclar artefactos generados con la lógica del proyecto:
-
 - DataGrip: inspección de `raw_transactions`, `pipeline_statistics_history` y `rejected_transactions`.
 - Terminal: ejecución del pipeline mostrando la carga inicial, la validación y la reconciliación final.
 
-Ubicación sugerida para capturas versionables:
+Ubicación:
 
 ```text
 docs/evidence/
