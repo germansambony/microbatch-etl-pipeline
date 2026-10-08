@@ -1,0 +1,339 @@
+C:\Users\camil\OneDrive\Documentos\microbatch-elt-engine\microbatch-etl-engine>python -m src.orchestrator
+Procesando archivos CSV fuente del data lake local...
+id_lote=2012-1-lote-0001-2b0639ee | archivo=2012-1.csv | filas_lote=10 | suma_lote=630.00 | total_filas=10 | promedio_acumulado=63.00 | min_global=14.00 | max_global=97.00
+id_lote=2012-1-lote-0002-b61e31b0 | archivo=2012-1.csv | filas_lote=9 | suma_lote=475.00 | total_filas=19 | promedio_acumulado=58.16 | min_global=14.00 | max_global=97.00
+id_lote=2012-1-lote-0003-e9ccb959 | archivo=2012-1.csv | filas_lote=1 | suma_lote=88.00 | total_filas=20 | promedio_acumulado=59.65 | min_global=14.00 | max_global=97.00
+id_lote=2012-2-lote-0001-e4e55d7a | archivo=2012-2.csv | filas_lote=10 | suma_lote=618.00 | total_filas=30 | promedio_acumulado=60.37 | min_global=14.00 | max_global=100.00
+id_lote=2012-2-lote-0002-4abae8c6 | archivo=2012-2.csv | filas_lote=10 | suma_lote=423.00 | total_filas=40 | promedio_acumulado=55.85 | min_global=10.00 | max_global=100.00
+id_lote=2012-2-lote-0003-a42b0cf4 | archivo=2012-2.csv | filas_lote=9 | suma_lote=549.00 | total_filas=49 | promedio_acumulado=56.80 | min_global=10.00 | max_global=100.00
+
+================================================================================
+====================== ESTADO DESPUÉS DE LA CARGA INICIAL ======================
+================================================================================
+
+[Auditoría] Registros recientes (pipeline_statistics_history):
+  [ Fila 1 ] -------------------------------------
+    batch_id                  : 2012-2-lote-0003-a42b0cf4
+    file_name                 : 2012-2.csv
+    processed_at              : 2026-10-08 00:46:15.415931
+    batch_rows                : 9
+    total_accumulated_rows    : 49
+    accumulated_sum           : 2783.00
+    accumulated_avg           : 56.80
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 2 ] -------------------------------------
+    batch_id                  : 2012-2-lote-0002-4abae8c6
+    file_name                 : 2012-2.csv
+    processed_at              : 2026-10-08 00:46:15.402265
+    batch_rows                : 10
+    total_accumulated_rows    : 40
+    accumulated_sum           : 2234.00
+    accumulated_avg           : 55.85
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 3 ] -------------------------------------
+    batch_id                  : 2012-2-lote-0001-e4e55d7a
+    file_name                 : 2012-2.csv
+    processed_at              : 2026-10-08 00:46:15.388855
+    batch_rows                : 10
+    total_accumulated_rows    : 30
+    accumulated_sum           : 1811.00
+    accumulated_avg           : 60.37
+    global_min_price          : 14.00
+    global_max_price          : 100.00
+  [ Fila 4 ] -------------------------------------
+    batch_id                  : 2012-1-lote-0003-e9ccb959
+    file_name                 : 2012-1.csv
+    processed_at              : 2026-10-08 00:46:15.364137
+    batch_rows                : 1
+    total_accumulated_rows    : 20
+    accumulated_sum           : 1193.00
+    accumulated_avg           : 59.65
+    global_min_price          : 14.00
+    global_max_price          : 97.00
+  [ Fila 5 ] -------------------------------------
+    batch_id                  : 2012-1-lote-0002-b61e31b0
+    file_name                 : 2012-1.csv
+    processed_at              : 2026-10-08 00:46:15.346421
+    batch_rows                : 9
+    total_accumulated_rows    : 19
+    accumulated_sum           : 1105.00
+    accumulated_avg           : 58.16
+    global_min_price          : 14.00
+    global_max_price          : 97.00
+
+[Raw] Muestra reciente de datos insertados (raw_transactions):
+  [ Fila 1 ] -------------------------------------
+    timestamp                 : 2012-02-21 00:00:00
+    price                     : 87.00
+    user_id                   : 5
+    file_name                 : 2012-2.csv
+    loaded_at                 : 2026-10-08 00:46:15.415931
+    batch_id                  : 2012-2-lote-0003-a42b0cf4
+  [ Fila 2 ] -------------------------------------
+    timestamp                 : 2012-02-22 00:00:00
+    price                     : 75.00
+    user_id                   : 7
+    file_name                 : 2012-2.csv
+    loaded_at                 : 2026-10-08 00:46:15.415931
+    batch_id                  : 2012-2-lote-0003-a42b0cf4
+  [ Fila 3 ] -------------------------------------
+    timestamp                 : 2012-02-23 00:00:00
+    price                     : 36.00
+    user_id                   : 8
+    file_name                 : 2012-2.csv
+    loaded_at                 : 2026-10-08 00:46:15.415931
+    batch_id                  : 2012-2-lote-0003-a42b0cf4
+  [ Fila 4 ] -------------------------------------
+    timestamp                 : 2012-02-24 00:00:00
+    price                     : 84.00
+    user_id                   : 8
+    file_name                 : 2012-2.csv
+    loaded_at                 : 2026-10-08 00:46:15.415931
+    batch_id                  : 2012-2-lote-0003-a42b0cf4
+  [ Fila 5 ] -------------------------------------
+    timestamp                 : 2012-02-25 00:00:00
+    price                     : 62.00
+    user_id                   : 6
+    file_name                 : 2012-2.csv
+    loaded_at                 : 2026-10-08 00:46:15.415931
+    batch_id                  : 2012-2-lote-0003-a42b0cf4
+
+================================================================================
+
+
+Reconciliación inicial (Consulta OLAP)
+total_filas_db=49 | promedio_db=56.80 | minimo_db=10.00 | maximo_db=100.00
+
+
+C:\Users\camil\OneDrive\Documentos\microbatch-elt-engine\microbatch-etl-engine>python -m src.orchestrator
+Procesando archivos CSV fuente del data lake local...
+Omitiendo 2012-1.csv: El archivo ya fue procesado previamente.
+Omitiendo 2012-2.csv: El archivo ya fue procesado previamente.
+id_lote=2012-3-lote-0001-3a02ea89 | archivo=2012-3.csv | filas_lote=10 | suma_lote=547.00 | total_filas=59 | promedio_acumulado=56.44 | min_global=10.00 | max_global=100.00
+id_lote=2012-3-lote-0002-f7a33d1b | archivo=2012-3.csv | filas_lote=10 | suma_lote=661.00 | total_filas=69 | promedio_acumulado=57.84 | min_global=10.00 | max_global=100.00
+id_lote=2012-3-lote-0003-25e9bca6 | archivo=2012-3.csv | filas_lote=10 | suma_lote=577.00 | total_filas=79 | promedio_acumulado=57.82 | min_global=10.00 | max_global=100.00
+id_lote=2012-3-lote-0004-3a9f7a87 | archivo=2012-3.csv | filas_lote=1 | suma_lote=65.00 | total_filas=80 | promedio_acumulado=57.91 | min_global=10.00 | max_global=100.00
+id_lote=2012-4-lote-0001-e968479f | archivo=2012-4.csv | filas_lote=10 | suma_lote=540.00 | total_filas=90 | promedio_acumulado=57.48 | min_global=10.00 | max_global=100.00
+id_lote=2012-4-lote-0002-1290a90d | archivo=2012-4.csv | filas_lote=9 | suma_lote=561.00 | total_filas=99 | promedio_acumulado=57.92 | min_global=10.00 | max_global=100.00
+id_lote=2012-4-lote-0003-f1eb6e78 | archivo=2012-4.csv | filas_lote=9 | suma_lote=506.00 | total_filas=108 | promedio_acumulado=57.78 | min_global=10.00 | max_global=100.00
+id_lote=2012-5-lote-0001-b7e957b6 | archivo=2012-5.csv | filas_lote=10 | suma_lote=497.00 | total_filas=118 | promedio_acumulado=57.09 | min_global=10.00 | max_global=100.00
+id_lote=2012-5-lote-0002-c2e07097 | archivo=2012-5.csv | filas_lote=10 | suma_lote=573.00 | total_filas=128 | promedio_acumulado=57.11 | min_global=10.00 | max_global=100.00
+id_lote=2012-5-lote-0003-6bc75659 | archivo=2012-5.csv | filas_lote=10 | suma_lote=703.00 | total_filas=138 | promedio_acumulado=58.07 | min_global=10.00 | max_global=100.00
+id_lote=2012-5-lote-0004-37d45209 | archivo=2012-5.csv | filas_lote=1 | suma_lote=33.00 | total_filas=139 | promedio_acumulado=57.88 | min_global=10.00 | max_global=100.00
+
+================================================================================
+====================== ESTADO DESPUÉS DE LA CARGA INICIAL ======================
+================================================================================
+
+[Auditoría] Registros recientes (pipeline_statistics_history):
+  [ Fila 1 ] -------------------------------------
+    batch_id                  : 2012-5-lote-0004-37d45209
+    file_name                 : 2012-5.csv
+    processed_at              : 2026-10-08 00:47:07.241631
+    batch_rows                : 1
+    total_accumulated_rows    : 139
+    accumulated_sum           : 8046.00
+    accumulated_avg           : 57.88
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 2 ] -------------------------------------
+    batch_id                  : 2012-5-lote-0003-6bc75659
+    file_name                 : 2012-5.csv
+    processed_at              : 2026-10-08 00:47:07.228864
+    batch_rows                : 10
+    total_accumulated_rows    : 138
+    accumulated_sum           : 8013.00
+    accumulated_avg           : 58.07
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 3 ] -------------------------------------
+    batch_id                  : 2012-5-lote-0002-c2e07097
+    file_name                 : 2012-5.csv
+    processed_at              : 2026-10-08 00:47:07.215210
+    batch_rows                : 10
+    total_accumulated_rows    : 128
+    accumulated_sum           : 7310.00
+    accumulated_avg           : 57.11
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 4 ] -------------------------------------
+    batch_id                  : 2012-5-lote-0001-b7e957b6
+    file_name                 : 2012-5.csv
+    processed_at              : 2026-10-08 00:47:07.200373
+    batch_rows                : 10
+    total_accumulated_rows    : 118
+    accumulated_sum           : 6737.00
+    accumulated_avg           : 57.09
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 5 ] -------------------------------------
+    batch_id                  : 2012-4-lote-0003-f1eb6e78
+    file_name                 : 2012-4.csv
+    processed_at              : 2026-10-08 00:47:07.176448
+    batch_rows                : 9
+    total_accumulated_rows    : 108
+    accumulated_sum           : 6240.00
+    accumulated_avg           : 57.78
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+
+[Raw] Muestra reciente de datos insertados (raw_transactions):
+  [ Fila 1 ] -------------------------------------
+    timestamp                 : 2012-05-31 00:00:00
+    price                     : 33.00
+    user_id                   : 6
+    file_name                 : 2012-5.csv
+    loaded_at                 : 2026-10-08 00:47:07.241631
+    batch_id                  : 2012-5-lote-0004-37d45209
+  [ Fila 2 ] -------------------------------------
+    timestamp                 : 2012-05-22 00:00:00
+    price                     : 88.00
+    user_id                   : 1
+    file_name                 : 2012-5.csv
+    loaded_at                 : 2026-10-08 00:47:07.228864
+    batch_id                  : 2012-5-lote-0003-6bc75659
+  [ Fila 3 ] -------------------------------------
+    timestamp                 : 2012-05-23 00:00:00
+    price                     : 34.00
+    user_id                   : 10
+    file_name                 : 2012-5.csv
+    loaded_at                 : 2026-10-08 00:47:07.228864
+    batch_id                  : 2012-5-lote-0003-6bc75659
+  [ Fila 4 ] -------------------------------------
+    timestamp                 : 2012-05-24 00:00:00
+    price                     : 100.00
+    user_id                   : 2
+    file_name                 : 2012-5.csv
+    loaded_at                 : 2026-10-08 00:47:07.228864
+    batch_id                  : 2012-5-lote-0003-6bc75659
+  [ Fila 5 ] -------------------------------------
+    timestamp                 : 2012-05-25 00:00:00
+    price                     : 77.00
+    user_id                   : 9
+    file_name                 : 2012-5.csv
+    loaded_at                 : 2026-10-08 00:47:07.228864
+    batch_id                  : 2012-5-lote-0003-6bc75659
+
+================================================================================
+
+
+Reconciliación inicial (Consulta OLAP)
+total_filas_db=139 | promedio_db=57.88 | minimo_db=10.00 | maximo_db=100.00
+
+Procesando validation.csv como comprobación final...
+id_lote=validation-lote-0001-f81e67c7 | archivo=validation.csv | filas_lote=8 | suma_lote=334.00 | total_filas=147 | promedio_acumulado=57.01 | min_global=10.00 | max_global=100.00
+
+================================================================================
+======================= ESTADO DESPUÉS DE VALIDATION.CSV =======================
+================================================================================
+
+[Auditoría] Registros recientes (pipeline_statistics_history):
+  [ Fila 1 ] -------------------------------------
+    batch_id                  : validation-lote-0001-f81e67c7
+    file_name                 : validation.csv
+    processed_at              : 2026-10-08 00:47:07.277022
+    batch_rows                : 8
+    total_accumulated_rows    : 147
+    accumulated_sum           : 8380.00
+    accumulated_avg           : 57.01
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 2 ] -------------------------------------
+    batch_id                  : 2012-5-lote-0004-37d45209
+    file_name                 : 2012-5.csv
+    processed_at              : 2026-10-08 00:47:07.241631
+    batch_rows                : 1
+    total_accumulated_rows    : 139
+    accumulated_sum           : 8046.00
+    accumulated_avg           : 57.88
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 3 ] -------------------------------------
+    batch_id                  : 2012-5-lote-0003-6bc75659
+    file_name                 : 2012-5.csv
+    processed_at              : 2026-10-08 00:47:07.228864
+    batch_rows                : 10
+    total_accumulated_rows    : 138
+    accumulated_sum           : 8013.00
+    accumulated_avg           : 58.07
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 4 ] -------------------------------------
+    batch_id                  : 2012-5-lote-0002-c2e07097
+    file_name                 : 2012-5.csv
+    processed_at              : 2026-10-08 00:47:07.215210
+    batch_rows                : 10
+    total_accumulated_rows    : 128
+    accumulated_sum           : 7310.00
+    accumulated_avg           : 57.11
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+  [ Fila 5 ] -------------------------------------
+    batch_id                  : 2012-5-lote-0001-b7e957b6
+    file_name                 : 2012-5.csv
+    processed_at              : 2026-10-08 00:47:07.200373
+    batch_rows                : 10
+    total_accumulated_rows    : 118
+    accumulated_sum           : 6737.00
+    accumulated_avg           : 57.09
+    global_min_price          : 10.00
+    global_max_price          : 100.00
+
+[Raw] Muestra reciente de datos insertados (raw_transactions):
+  [ Fila 1 ] -------------------------------------
+    timestamp                 : 2012-06-01 00:00:00
+    price                     : 26.00
+    user_id                   : 10
+    file_name                 : validation.csv
+    loaded_at                 : 2026-10-08 00:47:07.277022
+    batch_id                  : validation-lote-0001-f81e67c7
+  [ Fila 2 ] -------------------------------------
+    timestamp                 : 2012-06-02 00:00:00
+    price                     : 11.00
+    user_id                   : 8
+    file_name                 : validation.csv
+    loaded_at                 : 2026-10-08 00:47:07.277022
+    batch_id                  : validation-lote-0001-f81e67c7
+  [ Fila 3 ] -------------------------------------
+    timestamp                 : 2012-06-03 00:00:00
+    price                     : 13.00
+    user_id                   : 9
+    file_name                 : validation.csv
+    loaded_at                 : 2026-10-08 00:47:07.277022
+    batch_id                  : validation-lote-0001-f81e67c7
+  [ Fila 4 ] -------------------------------------
+    timestamp                 : 2012-06-04 00:00:00
+    price                     : 92.00
+    user_id                   : 7
+    file_name                 : validation.csv
+    loaded_at                 : 2026-10-08 00:47:07.277022
+    batch_id                  : validation-lote-0001-f81e67c7
+  [ Fila 5 ] -------------------------------------
+    timestamp                 : 2012-06-05 00:00:00
+    price                     : 31.00
+    user_id                   : 10
+    file_name                 : validation.csv
+    loaded_at                 : 2026-10-08 00:47:07.277022
+    batch_id                  : validation-lote-0001-f81e67c7
+
+================================================================================
+
+
+Reconciliación final con validation.csv
+total_filas_db=147 | promedio_db=57.01 | minimo_db=10.00 | maximo_db=100.00
+
+
+C:\Users\camil\OneDrive\Documentos\microbatch-elt-engine\microbatch-etl-engine>pytest
+============================================================================================= test session starts ==============================================================================================
+platform win32 -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: C:\Users\camil\OneDrive\Documentos\microbatch-elt-engine\microbatch-etl-engine
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collected 7 items
+
+tests\test_integration.py ....                                                                                                                                                                            [ 57%]
+tests\test_stats.py ...                                                                                                                                                                                   [100%]
+
+============================================================================================== 7 passed in 2.39s ===============================================================================================

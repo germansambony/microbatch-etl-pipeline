@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.pytest_tmp/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment files
+.env
+.env.*
+
+# DuckDB / local warehouse artifacts
+pipeline_state.json
+data_warehouse.db
+*.duckdb
+*.db
+*.wal
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
