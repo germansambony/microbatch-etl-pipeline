@@ -15,9 +15,7 @@ La versión actual agrega persistencia de estado en `pipeline_state.json`. Ese a
 - Mantiene una tabla de auditoría por micro-batch para trazabilidad.
 - Ejecuta consultas agregadas a DuckDB solo como reconciliación/demostración, no como fuente para reconstruir el histórico del pipeline.
 
-## Versión Actual: Estado Persistente
-
-Antes, el pipeline podía calcular métricas en memoria durante una ejecución. Ahora también puede continuar desde ejecuciones anteriores leyendo `pipeline_state.json` al iniciar.
+El pipeline puede calcular métricas en memoria durante una ejecución, ademas de que puede continuar desde ejecuciones anteriores leyendo `pipeline_state.json` al iniciar.
 
 Ejemplo de estado después de procesar datos válidos:
 
